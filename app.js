@@ -11,9 +11,7 @@ app.use(bodyparser.urlencoded({ extended: true }));
 app.use(bodyparser.json());
 app.use(cors());
 
-mongoose.connect('mongodb+srv://admin-aditya:test123@cluster0.oc1pt0o.mongodb.net/?retryWrites=true&w=majority/todolist',()=>{
-  console.log('mongoodb');
-});
+mongoose.connect('mongodb+srv://admin-aditya:test123@cluster0.oc1pt0o.mongodb.net/todolist');
 
 
 const contentschema = mongoose.Schema({content:String,status:String},{versionKey: false});
