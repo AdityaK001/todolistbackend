@@ -22,7 +22,7 @@ var Note = mongoose.model("Note",contentschema,'notes');
 
 app.get('/', async (req,res)=>{ 
   
-  var listitems=[];
+  let listitems=[];
  
   
   listitems= await Note.find();
